@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #151827;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    border-bottom: 1px solid #e8e9f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo span {
+    margin-right: 4px;
+}
+
+.logo b {
+    color: #6c4df6;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #55596b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #6c4df6;
+}
+
+.theme-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 680px;
+    padding: 100px 7%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 80px;
+    background:
+        radial-gradient(circle at 10% 20%, #e9e2ff, transparent 35%),
+        radial-gradient(circle at 90% 80%, #dff6ff, transparent 35%);
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: #ece8ff;
+    color: #6046df;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    max-width: 760px;
+}
+
+.hero h1 span {
+    color: #6c4df6;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 28px 0;
+    color: #606577;
+    font-size: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.primary-btn {
+    background: #6c4df6;
+    color: white;
+    box-shadow: 0 8px 20px rgba(108,77,246,0.25);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    background: #583be0;
+}
+
+.secondary-btn {
+    background: white;
+    color: #292d3d;
+    border: 1px solid #dedfea;
+}
+
+.secondary-btn:hover {
+    border-color: #6c4df6;
+    color: #6c4df6;
+}
+
+
+/* HERO CARD */
+
+.hero-card {
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 25px 70px rgba(40,30,80,0.15);
+    border: 1px solid #e9e7f4;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #eeeef5;
+    border-radius: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 100%;
+    background: #6c4df6;
+    border-radius: 20px;
+}
+
+.mini-stat {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.mini-stat div {
+    background: #f7f7fb;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.mini-stat strong {
+    display: block;
+    font-size: 22px;
+}
+
+.mini-stat small {
+    color: #777;
+}
+
+.roadmap-preview {
+    background: #f8f7ff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.roadmap-preview p {
+    margin: 7px 0;
+    color: #444;
+    font-size: 14px;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 50px;
+}
+
+.section-heading span {
+    color: #6c4df6;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    line-height: 1.15;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #717586;
+}
+
+
+/* FEATURES */
+
+.feature-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #e8e8f0;
+    transition: 0.25s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(30,30,60,0.08);
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #717586;
+    font-size: 14px;
+}
+
+
+/* PROFILE */
+
+.profile-section {
+    background: #f0eff8;
+}
+
+.profile-form {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(30,30,60,0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dddde7;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    color: #202331;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6c4df6;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.full-btn {
+    width: 100%;
+}
+
+
+/* ROADMAP */
+
+.hidden {
+    display: none !important;
+}
+
+.roadmap-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.roadmap-item {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #e5e5ed;
+}
+
+.roadmap-number {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #ece8ff;
+    color: #6348e5;
+    font-weight: 800;
+}
+
+.roadmap-item h3 {
+    margin-bottom: 5px;
+}
+
+.roadmap-item p {
+    color: #717586;
+}
+
+
+/* RESUME */
+
+.resume-layout {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 30px;
+}
+
+.resume-form {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #e5e5ed;
+}
+
+.resume-form input,
+.resume-form textarea {
+    margin-bottom: 13px;
+}
+
+.resume-preview {
+    background: white;
+    min-height: 650px;
+    padding: 45px;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.resume-preview h2 {
+    font-size: 32px;
+}
+
+.resume-role {
+    color: #6c4df6;
+    font-weight: 700;
+}
+
+.resume-preview h3 {
+    margin-top: 28px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.resume-preview p {
+    color: #555;
+}
+
+
+/* INTERVIEW */
+
+.interview-section {
+    background: #f0eff8;
+}
+
+.interview-card {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(30,30,60,0.08);
+}
+
+.question-number {
+    color: #6c4df6;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.interview-card h3 {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.interview-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.feedback {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f1fff7;
+    border-left: 4px solid #23a66f;
+    border-radius: 10px;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 25px;
+}
+
+.score-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #e5e5ed;
+}
+
+.circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: grid;
+    place-items: center;
+    background: #ece8ff;
+    border: 14px solid #6c4df6;
+}
+
+.circle span {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.score-card p {
+    color: #777;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #e5e5ed;
+}
+
+.stat-card span {
+    font-size: 25px;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.stat-card small {
+    color: #777;
+}
+
+
+/* CTA */
+
+.cta {
+    padding: 100px 7%;
+    text-align: center;
+    background: #171329;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 45px;
+}
+
+.cta p {
+    color: #c6c2d5;
+    margin: 15px 0 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 50px 7%;
+    text-align: center;
+    background: #100d1f;
+    color: white;
+}
+
+footer p {
+    color: #aaa5ba;
+    margin-top: 10px;
+}
+
+
+/* DARK MODE */
+
+body.dark {
+    background: #11121a;
+    color: #eee;
+}
+
+body.dark .navbar,
+body.dark .hero-card,
+body.dark .feature-card,
+body.dark .profile-form,
+body.dark .roadmap-item,
+body.dark .resume-form,
+body.dark .resume-preview,
+body.dark .interview-card,
+body.dark .score-card,
+body.dark .stat-card {
+    background: #1b1d29;
+    color: #eee;
+    border-color: #303241;
+}
+
+body.dark .theme-btn {
+    background: #1b1d29;
+    color: white;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: #151720;
+    color: white;
+    border-color: #383a48;
+}
+
+body.dark .hero {
+    background:
+        radial-gradient(circle at 10% 20%, #292044, transparent 35%),
+        radial-gradient(circle at 90% 80%, #14313b, transparent 35%);
+}
+
+body.dark .hero p,
+body.dark .feature-card p,
+body.dark .section-heading p,
+body.dark .roadmap-item p {
+    color: #aaa;
+}
+
+body.dark .secondary-btn {
+    background: #1b1d29;
+    color: white;
+    border-color: #383a48;
+}
+
+body.dark .profile-section,
+body.dark .interview-section {
+    background: #151620;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .resume-layout,
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .hero,
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+        letter-spacing: -2px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-stat {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-form,
+    .interview-card {
+        padding: 25px;
+    }
+
+    .resume-preview {
+        padding: 25px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cta h2 {
+        font-size: 32px;
+    }
+
+    .roadmap-item {
+        padding: 18px;
+    }
+}

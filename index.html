@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkillSprint AI - Your AI-powered career companion">
+    <title>SkillSprint AI | Career Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span>⚡</span> SkillSprint <b>AI</b>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#resume">Resume</a>
+        <a href="#interview">Interview</a>
+        <a href="#progress">Progress</a>
+    </nav>
+
+    <button class="theme-btn" id="themeBtn">🌙</button>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <div class="badge">🚀 AI-Powered Career Platform</div>
+
+        <h1>
+            Turn Your Skills Into a
+            <span>Job-Ready Career.</span>
+        </h1>
+
+        <p>
+            SkillSprint AI creates personalized career roadmaps,
+            resume guidance, interview practice and skill tracking
+            for students and freshers.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#profile" class="primary-btn">Create My Roadmap →</a>
+            <a href="#features" class="secondary-btn">Explore Features</a>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="card-top">
+            <span>Career Readiness</span>
+            <span>72%</span>
+        </div>
+
+        <div class="progress-bar">
+            <div style="width:72%"></div>
+        </div>
+
+        <div class="mini-stat">
+            <div>
+                <strong>8</strong>
+                <small>Skills</small>
+            </div>
+
+            <div>
+                <strong>4</strong>
+                <small>Projects</small>
+            </div>
+
+            <div>
+                <strong>12</strong>
+                <small>Applications</small>
+            </div>
+        </div>
+
+        <div class="roadmap-preview">
+            <p>✓ Communication</p>
+            <p>✓ Excel</p>
+            <p>✓ Resume</p>
+            <p>○ Interview Practice</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="section" id="features">
+
+    <div class="section-heading">
+        <span>FEATURES</span>
+        <h2>Everything You Need to Become Career Ready</h2>
+        <p>One simple platform for your complete career preparation.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <div class="icon">🎯</div>
+            <h3>Career Roadmap</h3>
+            <p>Create a personalized roadmap based on your target career and current skills.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">📄</div>
+            <h3>Resume Builder</h3>
+            <p>Build a professional resume using your education, skills and projects.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">💬</div>
+            <h3>Interview Coach</h3>
+            <p>Practice common interview questions and receive instant feedback.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h3>Progress Tracker</h3>
+            <p>Track your career preparation and see how close you are to your goal.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PROFILE -->
+<section class="section profile-section" id="profile">
+
+    <div class="section-heading">
+        <span>GET STARTED</span>
+        <h2>Create Your Career Profile</h2>
+        <p>Tell us about yourself and generate your personalized roadmap.</p>
+    </div>
+
+    <div class="profile-form">
+
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="studentName" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label>Education</label>
+            <input type="text" id="education" placeholder="Example: B.Com IT">
+        </div>
+
+        <div class="form-group">
+            <label>Target Career</label>
+
+            <select id="career">
+                <option value="">Select your career</option>
+                <option value="SDR">Sales Development Representative</option>
+                <option value="web">Web Developer</option>
+                <option value="data">Data Analyst</option>
+                <option value="hr">HR Executive</option>
+                <option value="marketing">Digital Marketing</option>
+                <option value="finance">Finance Executive</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Your Skills</label>
+            <input type="text" id="skills" placeholder="Example: Excel, Communication, Python">
+        </div>
+
+        <button class="primary-btn full-btn" onclick="generateRoadmap()">
+            Generate My Career Roadmap 🚀
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ROADMAP -->
+<section class="section hidden" id="roadmap">
+
+    <div class="section-heading">
+        <span>YOUR ROADMAP</span>
+        <h2 id="roadmapTitle">Your Career Roadmap</h2>
+        <p id="roadmapDescription"></p>
+    </div>
+
+    <div class="roadmap-container" id="roadmapContainer"></div>
+
+</section>
+
+
+<!-- RESUME -->
+<section class="section" id="resume">
+
+    <div class="section-heading">
+        <span>RESUME BUILDER</span>
+        <h2>Create Your Professional Resume</h2>
+        <p>Enter your information and generate a simple professional resume.</p>
+    </div>
+
+    <div class="resume-layout">
+
+        <div class="resume-form">
+
+            <input id="resumeName" placeholder="Full Name">
+            <input id="resumeEmail" placeholder="Email">
+            <input id="resumePhone" placeholder="Phone">
+            <input id="resumeRole" placeholder="Career / Job Title">
+
+            <textarea id="resumeAbout" placeholder="About Me"></textarea>
+
+            <textarea id="resumeSkills"
+                placeholder="Skills - separate with commas"></textarea>
+
+            <textarea id="resumeEducation"
+                placeholder="Education"></textarea>
+
+            <textarea id="resumeProjects"
+                placeholder="Projects"></textarea>
+
+            <button class="primary-btn" onclick="generateResume()">
+                Generate Resume
+            </button>
+
+        </div>
+
+
+        <div class="resume-preview" id="resumePreview">
+
+            <h2>Your Name</h2>
+            <p class="resume-role">Career Professional</p>
+
+            <hr>
+
+            <h3>ABOUT ME</h3>
+            <p>Your professional summary will appear here.</p>
+
+            <h3>SKILLS</h3>
+            <p>Add your skills to generate your resume.</p>
+
+            <h3>EDUCATION</h3>
+            <p>Your education will appear here.</p>
+
+            <h3>PROJECTS</h3>
+            <p>Your projects will appear here.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTERVIEW -->
+<section class="section interview-section" id="interview">
+
+    <div class="section-heading">
+        <span>AI INTERVIEW COACH</span>
+        <h2>Practice Your Interview</h2>
+        <p>Answer the question and get instant feedback.</p>
+    </div>
+
+    <div class="interview-card">
+
+        <div class="question-number">
+            Question <span id="questionNumber">1</span> / 5
+        </div>
+
+        <h3 id="question">
+            Tell me about yourself.
+        </h3>
+
+        <textarea id="answer"
+            placeholder="Type your answer here..."></textarea>
+
+        <div class="interview-buttons">
+            <button class="primary-btn" onclick="checkAnswer()">
+                Get Feedback
+            </button>
+
+            <button class="secondary-btn" onclick="nextQuestion()">
+                Next Question →
+            </button>
+        </div>
+
+        <div class="feedback hidden" id="feedback"></div>
+
+    </div>
+
+</section>
+
+
+<!-- PROGRESS -->
+<section class="section" id="progress">
+
+    <div class="section-heading">
+        <span>YOUR PROGRESS</span>
+        <h2>Career Readiness Dashboard</h2>
+    </div>
+
+    <div class="dashboard">
+
+        <div class="score-card">
+            <div class="circle">
+                <span id="score">72%</span>
+            </div>
+
+            <h3>Career Readiness</h3>
+            <p>Keep learning and practicing!</p>
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <span>🎯</span>
+                <strong>80%</strong>
+                <small>Skills</small>
+            </div>
+
+            <div class="stat-card">
+                <span>📄</span>
+                <strong>90%</strong>
+                <small>Resume</small>
+            </div>
+
+            <div class="stat-card">
+                <span>💬</span>
+                <strong>65%</strong>
+                <small>Interview</small>
+            </div>
+
+            <div class="stat-card">
+                <span>💼</span>
+                <strong>70%</strong>
+                <small>Portfolio</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Ready to Start Your Career Sprint?</h2>
+
+    <p>
+        Build your skills. Create your resume.
+        Practice interviews. Get career ready.
+    </p>
+
+    <a href="#profile" class="primary-btn">
+        Start for Free →
+    </a>
+
+</section>
+
+
+<footer>
+
+    <div class="logo">
+        ⚡ SkillSprint <b>AI</b>
+    </div>
+
+    <p>
+        AI-powered career preparation for students and freshers.
+    </p>
+
+    <p>
+        © 2026 SkillSprint AI. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
